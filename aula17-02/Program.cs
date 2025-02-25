@@ -24,6 +24,15 @@ while (!fimDeJogo)
     if (tabuleiro[linha, coluna] == null)
     {
         tabuleiro[linha, coluna] = jogadorAtual;
+        if (
+            (tabuleiro[0,0] == tabuleiro[0,1] && tabuleiro[0,1] == tabuleiro[0,2] && tabuleiro[0, 0] != null) ||
+            (tabuleiro[1, 0] == tabuleiro[1, 1] && tabuleiro[1, 1] == tabuleiro[1, 2] && tabuleiro[1, 0] != null) ||
+            (tabuleiro[2, 0] == tabuleiro[2, 1] && tabuleiro[2, 1] == tabuleiro[2, 2] && tabuleiro[2, 0] != null) 
+            )
+        {
+            Console.WriteLine($"Vitória do jogador {jogadorAtual}");
+            break;
+        }
         if (jogadorAtual == jogadorX)
             jogadorAtual = jogadorO;
 
