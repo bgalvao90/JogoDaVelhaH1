@@ -53,9 +53,9 @@ do
                     (tabuleiro[0, 2] == tabuleiro[1, 1] && tabuleiro[1, 1] == tabuleiro[2, 0] && tabuleiro[0, 2] != null)
                     )
                 {
-
-                    fimDeJogo = true;
                     Console.WriteLine($"Vitória do jogador {jogadorAtual}");
+                    fimDeJogo = true;
+
                 }
                 else if
                    (
@@ -87,12 +87,13 @@ do
                 Console.WriteLine("Posição está ocupada.");
 
             }
+            
             Console.Clear();
             ImprimirTabuleiro();
 
         }
 
-
+        Console.ReadLine();
     }
     else if (opcao == 2)
     {
